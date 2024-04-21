@@ -1,0 +1,78 @@
+baseURL = "https://techinnovacloud.com"
+languageCode = "en-us"
+title = "TECHINNOVA CLOUD"
+theme = "Agnes"
+
+[params]
+	dateFormat = "Jan 2, 2023" 
+	authorName = "TECHINNOVA CLOUD"
+	google_analytics_id = "GA-"
+
+
+
+[permalinks]
+  [permalinks.page]
+    posts = '/posts/:year/:month/:slug/'
+  [permalinks.section]
+    posts = '/posts/'
+
+	
+	[[menu.main]]
+		Name = "Contact us"
+		URL = "/contact/"
+		weight = 1
+	
+#	[[menu.main]]
+#		Name = "FAQ's"
+#		URL = "#"
+#		weight = 3
+	
+#	[[menu.main]]
+#		Name = "Support"
+#		URL = "#"
+#		weight = 4
+
+#[params.social]
+#	TwitterURL = "https://twitter.com/podbharati"
+#	GoogleURL = "https://google.com"
+#	FacebookURL = "https://facebook.com/podbharati"
+		
+[params.content]
+	LeadTitle = "TECHINNOVA CLOUD"
+	LeadDescription = "Need a modern and user-friendly solution for IT, cloud services, and VoIP? Our team of experts in each area can bring their experience to the table and create a custom solution that's easy to use and manage."
+	ButtonCaption = "Contact Us"
+	ButtonURL = "/contact/"
+
+################### Feature Columns (do not exceed 4) ####################
+
+[[params.feature]]
+	FeatureTitle = "CLOUD"
+	FeatureDescription = "Feeling lost in the cloud maze? Our cloud consulting services are your personalized roadmap to success. We'll guide you through the complexities of cloud adoption with confidence, tailoring our strategic advice to your unique business goals. From selecting the perfect platform to developing a smooth migration plan, we empower you to make informed decisions every step of the way."
+	FeatureImage = "images/feature-1.png"
+	
+[[params.feature]]
+	FeatureTitle = "VOIP"
+	FeatureDescription = "In today's fast-paced world, staying connected is crucial. That's where our reliable telecommunication services come in. We offer the quickest and easiest way to reach your customers, clients, and partners.  No more dropped calls or missed messages. Our secure and universally trusted services ensure your communication is crystal clear and always gets through. Let us help you build stronger relationships and close more deals – all with the power of effective telecommunication."
+	FeatureImage = "images/feature-2.png"
+
+[[params.feature]]
+	FeatureTitle = "VPS"
+	FeatureDescription = "Ready to unleash your website's full potential? Our robust and dependable Windows VPS hosting plans put you in control. We've designed them to be easily scalable, so you can tailor your virtual environment to your specific needs – no matter how demanding your business gets. Experience a performance boost and rock-solid security, all while streamlining your website's management. Let's unlock your online potential together!"
+	FeatureImage = "images/feature-3.png"
+	
+################### Pricing Columns (do not exceed 3) ####################
+
+[[params.pricing]]
+        PricingTitle = "Bradley"
+        [[params.pricing.Features]]
+                Description = "TECHINNOVA CLOUD consistently demonstrates responsiveness and expertise in their service delivery. They exhibit a thorough understanding of issues, dedicating the necessary time for comprehensive problem resolution. Moreover, their communication remains effective and transparent throughout the entirety of the process."
+
+[[params.pricing]]
+        PricingTitle = "Tom"
+        [[params.pricing.Features]]
+                Description = "TECHINNOVA CLOUD has proven to be an exceptional partner, boasting a diverse team capable of addressing our varied IT requirements proficiently. Their unfailing friendliness and promptness, coupled with competitive pricing, consistently meet our expectations."
+        
+[[params.pricing]]
+        PricingTitle = "Craig"
+        [[params.pricing.Features]]
+                Description = "Having been a loyal client for an extended period, we value the responsiveness and meticulous attention to our service requirements exhibited by the team. Our experience is enriched by the presence of an outstanding account manager who consistently stands ready to provide assistance."

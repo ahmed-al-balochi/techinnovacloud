@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <section class="container" id="main">
+    <h1 class="feature-title h3-mobile" id="title">{{ .Title }}</h1>
+    <div>
+      <article class="hero-paragraph is-revealing" id="content">
+        {{ .Content }}
+      </article>
+    </div>
+  </section>
+  <aside id="meta">
+    <div>
+      {{ with .GetTerms "topics" }}
+        <ul class="topics" id="topics">
+          {{ range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+        </ul>
+      {{ end }}
+      {{ with .GetTerms "tags" }}
+        <ul class="tags" id="tags">
+          {{ range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </div>
+    <div>
+      {{ with .PrevInSection }}
+        <a class="previous" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
+      {{ end }}
+      {{ with .NextInSection }}
+        <a class="next" href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
+      {{ end }}
+    </div>
+  </aside>
+{{ end }}
