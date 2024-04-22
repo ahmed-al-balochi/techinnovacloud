@@ -1,4 +1,4 @@
-baseURL = "https://techinnovacloud.com"
+baseURL = "https://techinnovacloud.com/"
 languageCode = "en-us"
 title = "TECHINNOVA CLOUD"
 theme = "agnes-hugo-theme"
