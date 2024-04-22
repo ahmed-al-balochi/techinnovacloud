@@ -1,3 +1,6 @@
 [submodule "themes/Agnes"]
 	path = themes/Agnes
 	url = git@github.com:ahmed-al-balochi/agnes-hugo-theme.git
+[submodule "themes/agnes-hugo-theme"]
+	path = themes/agnes-hugo-theme
+	url = git@github.com:ahmed-al-balochi/agnes-hugo-theme.git

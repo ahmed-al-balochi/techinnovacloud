@@ -1,7 +1,7 @@
 baseURL = "https://techinnovacloud.com"
 languageCode = "en-us"
 title = "TECHINNOVA CLOUD"
-theme = "Agnes"
+theme = "agnes-hugo-theme"
 
 [params]
 	dateFormat = "Jan 2, 2023" 
