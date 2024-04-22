@@ -1,0 +1,14 @@
+				<footer class="site-footer text-light">
+					<div class="container">
+						<div class="site-footer-inner has-top-divider">
+							<div class="brand footer-brand">
+								<a href="/">
+									<img width="208" height="100" src="https://i.ibb.co/d246GFQ/logo-design-04-white.png" alt="logo" border="0"></a>
+								</a>
+							</div>
+							{{ partial "nav.html" . }}
+							{{ partial "social.html" . }}
+							<div class="footer-copyright">&copy; {{ now.Format "2006"}} {{ .Site.Params.authorName | markdownify }}, all rights reserved</div>
+						</div>
+					</div>
+				</footer>

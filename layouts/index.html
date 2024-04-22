@@ -1,0 +1,84 @@
+{{ define "main" }}
+			<section class="hero">
+				<div class="container">	
+					<div class="hero-inner">
+						<div class="hero-copy">
+							<h1 class="hero-title h2-mobile mt-0 is-revealing">{{ .Site.Params.Content.LeadTitle | markdownify }}</h1>
+							<p class="hero-paragraph is-revealing">{{ .Site.Params.Content.LeadDescription | markdownify }}</p>
+							{{ if .Site.Params.Content.ButtonCaption }}
+							<p class="hero-cta is-revealing"><a class="button button-primary button-shadow" href="{{ .Site.Params.Content.ButtonURL}}">{{ .Site.Params.Content.ButtonCaption | markdownify }}</a></p>
+							{{ end }}							
+						</div>
+							<div class="hero-illustration is-revealing">
+							<svg width="528" height="413" viewBox="0 0 528 413" xmlns="http://www.w3.org/2000/svg">
+								<defs>
+									<filter x="-500%" y="-500%" width="1000%" height="1000%" filterUnits="objectBoundingBox" id="dropshadow-1">
+										<feOffset dy="16" in="SourceAlpha" result="shadowOffsetOuter"/>
+										<feGaussianBlur stdDeviation="24" in="shadowOffsetOuter" result="shadowBlurOuter"/>
+										<feColorMatrix values="0 0 0 0 0.12 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.2 0" in="shadowBlurOuter"/>
+									</filter>
+								</defs>
+								<g fill="none" fill-rule="evenodd">
+									<svg width="528" height="297" xmlns="http://www.w3.org/2000/svg">
+										<image xlink:href="https://i.ibb.co/mRjjbnL/hero.jpg" alt="hero" width="528" height="413" />
+									</svg>
+									<path fill="#FFF" d="M0 63h528v297H0z" style="mix-blend-mode:multiply;filter:url(#dropshadow-1)"/>
+									<path fill="#4744DF" d="M0 300l88 81H0z"/>
+									<rect fill="url(#hero-illustration-d)" x="335" y="242" width="32" height="32" rx="16"/>
+								</g>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="features section text-center">
+				<div class="section-square"></div>
+				<div class="container">
+					<div class="features-inner section-inner ">
+                        <div class="features-wrap">
+							{{ range site.Params.feature }}
+                            <div class="feature is-revealing">
+                                <div class="feature-inner" style="border-radius: 10px;">
+                                    <div class="feature-icon">
+                                        <img src="{{ .FeatureImage }}">
+                                    </div>
+                                    <h4 class="feature-title h3-mobile">{{ .FeatureTitle }}</h4>
+                                    <p class="text-sm">{{ .FeatureDescription }}</p>
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+				</div>
+			</section>
+			<section class="pricing section">
+				<div class="section-square"></div>
+				<div class="container" >
+					<div class="pricing-inner section-inner has-top-divider">
+                        <h2 class="section-title mt-0 text-center">Client Reviews</h2>
+                        <div class="pricing-tables-wrap">
+							{{ range site.Params.pricing }}
+                            <div class="pricing-table">
+                                <div class="pricing-table-inner" style="border-radius: 10px;">
+                                    <div class="pricing-table-main">
+                                        <div class="pricing-table-header is-revealing">
+                                            <div class="pricing-table-title mt-12 mb-8">{{ .PricingTitle }}</div>
+                                        </div>
+                                        <ul class="pricing-table-features list-reset text-xs mt-24 mb-56">
+											{{ range .Features }}
+                                            <li class="is-revealing">
+                                                <span class="list-icon">
+                                                </span>
+                                                <span>{{ .Description }}</span>
+                                            </li>    
+											{{ end }}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> 
+							{{ end }}
+                        </div>
+                    </div>
+				</div>
+			</section>
+{{ end }}
